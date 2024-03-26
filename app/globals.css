@@ -17,17 +17,68 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* color: rgb(var(--foreground-rgb)); */
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+header {
+  height: 10vh;
+ padding: 40px;
+}
+
+main {
+  height: 90vh;
+  display: flex;
+  background-color: antiquewhite;
+}
+
+.leftSection {
+  flex-grow: 1;
+  margin-left: 50px;
+  padding-top: 50px;
+  margin-right: 30px;
+  border-right: 2px solid rgb(184, 184, 179);
+
+  li {
+    height: 30px;
+    padding-left: 30px;
+    text-align: left;
+    cursor: pointer;
+     &:hover {
+      background-color: #f3eaba;
+      border-radius: 10px;
+    }
+   
+  }
+}
+
+.selected-folder {
+  background-color: bisque;
+}
+
+.rightSection {
+  flex-grow: 5;
+
+  h3 {
+    padding: 30px;
+  }
+
+  li {
+    height: 50px;
+    padding: 10px;
+    text-align: left;
+    margin: 20px;
+    background-color: beige;
   }
 }
